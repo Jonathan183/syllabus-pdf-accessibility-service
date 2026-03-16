@@ -232,4 +232,4 @@ The system demonstrates that accessible document generation can be automated at 
 
 # License
 
-MIT License (or your preferred license)
+MIT License
