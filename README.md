@@ -85,6 +85,30 @@ The result is **consistent accessibility with minimal manual effort**.
 
 # System Architecture
 
+The service is implemented as a **cloud-native microservice** that converts structured HTML syllabus content into accessible PDF documents.
+
+```mermaid
+flowchart LR
+
+A[HTML Syllabus Editor<br>Faculty / Website Form]
+
+B[REST API<br>Spring Boot Service]
+
+C[PDF Generation Engine<br>iText + pdfHTML]
+
+D[Accessible Tagged PDF<br>PDF/UA Compatible]
+
+E[Container Image<br>GitHub Container Registry]
+
+F[Cloud Deployment<br>Azure Container Apps]
+
+A -->|POST HTML| B
+B --> C
+C --> D
+
+E --> F
+F --> B
+```
 ```
 HTML Syllabus Form
         ↓
